@@ -6,7 +6,7 @@ CC=gcc -fPIC
 
 sqlite3.so: extension.o wkb_compress.o util.o metaphon.o levenshtein.o
 #	$(CC) -lm -lsqlite3_caplyt -L/usr/local/lib -I/usr/include -shared $^ -o $@ 
-	$(CC) $^ -lm  $(GEOSQLITE_LOC)/libsqlite3.a -shared -o $@ 
+	$(CC) -dynamic -shared -o $@ $^ -lm -L${GEOSQLITE_LOC}/lib -L/Users/haven/.sm/pkg/active/lib -Wl,-rpath,/usr/caplyt/sqlite3/lib -lsqlite3
 
 test: test_wkb_compress test_levenshtein
 

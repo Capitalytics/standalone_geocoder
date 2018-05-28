@@ -23,7 +23,7 @@ SHP2SQLITE=shp2sqlite
 LIBLWGEOM=../liblwgeom/liblwgeom.a
 
 # iconv flags
-ICONV_LDFLAGS=-I/usr/local/Cellar/libiconv/1.14/include/ -L/usr/local/Cellar/libiconv/1.14/lib/ 
+ICONV_LDFLAGS=-I/usr/local/opt/libiconv/include/ -L/usr/local/opt/libiconv/lib/ 
 ICONV_LDFLAGS=-liconv -lc
 
 all: $(SHP2SQLITE)
